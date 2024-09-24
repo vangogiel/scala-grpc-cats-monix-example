@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package io.vangogiel.example;
+
+message CatsRequest {}
+message CatsResponse {
+  string response = 1;
+}
+
+service CatsService {
+  rpc handleRequest(CatsRequest) returns (CatsResponse);
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package io.vangogiel.example;
+
+message MonixRequest {}
+message MonixResponse {
+  string response = 1;
+}
+
+service MonixService {
+  rpc handleRequest(MonixRequest) returns (MonixResponse);
+}
